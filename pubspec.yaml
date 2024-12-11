@@ -22,6 +22,7 @@ dependencies:
   responsive_framework: ^1.5.1
   google_fonts: ^6.2.1
   animated_digit: ^3.2.3
+  flutter_svg: ^2.0.16
 
 
 
