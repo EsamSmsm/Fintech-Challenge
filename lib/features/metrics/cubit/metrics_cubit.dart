@@ -13,7 +13,7 @@ class MetricsCubit extends Cubit<MetricsState> {
 
   List<OrderModel> orders = [];
 
-  Future<void> loadOrders() async {
+  Future<void> fetchOrders() async {
     try {
       emit(OrdersLoading());
       orders = await repo.fetchOrders();

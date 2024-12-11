@@ -18,9 +18,11 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const MyHomePage());
       case metricsPage:
         return MaterialPageRoute(
-            builder: (_) => BlocProvider(
+            builder: (_) =>
+                BlocProvider(
                   create: (context) =>
-                      MetricsCubit(OrdersRepoImpl())..loadOrders(),
+                  MetricsCubit(OrdersRepoImpl())
+                    ..fetchOrders(),
                   child: const MetricsPage(),
                 ));
       case graphPage:
