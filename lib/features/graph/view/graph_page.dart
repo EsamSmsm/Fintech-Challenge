@@ -1,7 +1,7 @@
 import 'package:fintech_challenge/core/constants/colors.dart';
 import 'package:fintech_challenge/core/constants/strings.dart';
 import 'package:fintech_challenge/features/graph/cubit/graph_cubit.dart';
-import 'package:fintech_challenge/features/graph/view/widgets/graph_widget.dart';
+import 'package:fintech_challenge/features/graph/view/widgets/bar_chart_widget.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -26,7 +26,7 @@ class GraphPage extends StatelessWidget {
             if (state is OrdersLoading) {
               return const Center(child: CircularProgressIndicator());
             }
-            return GraphWidget(ordersData: ordersData);
+            return BarChartWidget(ordersData: ordersData);
           },
         ),
       ),

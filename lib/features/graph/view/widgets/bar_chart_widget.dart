@@ -5,8 +5,8 @@ import 'package:syncfusion_flutter_charts/charts.dart';
 import '../../../../core/constants/colors.dart';
 import '../../../../core/constants/strings.dart';
 
-class GraphWidget extends StatelessWidget {
-  const GraphWidget({
+class BarChartWidget extends StatelessWidget {
+  const BarChartWidget({
     super.key,
     required this.ordersData,
   });
@@ -20,7 +20,6 @@ class GraphWidget extends StatelessWidget {
         title: const AxisTitle(text: StringsManager.time),
         dateFormat: DateFormat.MMMd(),
         intervalType: DateTimeIntervalType.days,
-        autoScrollingMode: AutoScrollingMode.start,
       ),
       primaryYAxis: NumericAxis(
         title: const AxisTitle(text: StringsManager.ordersCount),
@@ -44,7 +43,9 @@ class GraphWidget extends StatelessWidget {
           yValueMapper: (MapEntry<DateTime, int> data, _) => data.value,
           name: StringsManager.orders,
           pointColorMapper: (datum, index) {
-            if (datum.value > 1) {
+            final average =
+                ordersData.values.reduce((a, b) => a + b) / ordersData.length;
+            if (datum.value > average) {
               return ColorManager.primary;
             } else {
               return ColorManager.secondary;

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:fintech_challenge/data/models/order_model.dart';
 import 'package:fintech_challenge/data/repo/orders_repo.dart';
 import 'package:fintech_challenge/features/graph/cubit/graph_cubit.dart';
@@ -69,7 +71,7 @@ void main() {
           status: OrderStatus.delivered,
           isActive: true,
           company: 'Company A',
-          registered: DateTime(2023, 10, 1),
+          registered: DateTime(2023, 11, 1),
         ),
         OrderModel(
           id: '2',
@@ -88,9 +90,11 @@ void main() {
           registered: DateTime(2023, 10, 2),
         ),
       ];
+      graphCubit.populateOrderCounts();
       final orderCounts = graphCubit.getOrderCountsByDate();
+      log(orderCounts.toString());
       expect(orderCounts, {
-        DateTime(2023, 10, 1): 1,
+        DateTime(2023, 11, 1): 1,
         DateTime(2023, 10, 2): 2,
       });
     });

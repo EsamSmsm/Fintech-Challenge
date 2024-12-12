@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 
@@ -19,7 +21,7 @@ class GraphCubit extends Cubit<GraphState> {
     try {
       emit(OrdersLoading());
       orders = await _repo.fetchOrders();
-      _populateOrderCounts();
+      populateOrderCounts();
       emit(OrdersLoaded());
     } catch (e) {
       emit(OrdersError(e.toString()));
@@ -27,7 +29,7 @@ class GraphCubit extends Cubit<GraphState> {
   }
 
   /// Populates the orderCounts map with the count of orders by date.
-  void _populateOrderCounts() {
+  void populateOrderCounts() {
     orderCounts.clear();
     for (var order in orders) {
       final date = DateTime(
@@ -38,6 +40,7 @@ class GraphCubit extends Cubit<GraphState> {
 
   /// Returns the map of order counts by date.
   Map<DateTime, int> getOrderCountsByDate() {
+    log(orderCounts.toString());
     return orderCounts;
   }
 }
