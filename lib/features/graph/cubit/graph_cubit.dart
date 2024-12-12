@@ -12,25 +12,32 @@ class GraphCubit extends Cubit<GraphState> {
   final OrdersRepo _repo;
 
   List<OrderModel> orders = [];
+  Map<DateTime, int> orderCounts = {};
 
+  /// Fetches orders from the repository and updates the state.
   Future<void> fetchOrders() async {
     try {
       emit(OrdersLoading());
       orders = await _repo.fetchOrders();
+      _populateOrderCounts();
       emit(OrdersLoaded());
     } catch (e) {
       emit(OrdersError(e.toString()));
     }
   }
 
-  Map<DateTime, int> getOrderCountsByDate() {
-    final Map<DateTime, int> orderCounts = {};
+  /// Populates the orderCounts map with the count of orders by date.
+  void _populateOrderCounts() {
+    orderCounts.clear();
     for (var order in orders) {
       final date = DateTime(
           order.registered.year, order.registered.month, order.registered.day);
       orderCounts[date] = (orderCounts[date] ?? 0) + 1;
     }
+  }
 
+  /// Returns the map of order counts by date.
+  Map<DateTime, int> getOrderCountsByDate() {
     return orderCounts;
   }
 }

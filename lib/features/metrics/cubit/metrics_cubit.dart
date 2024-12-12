@@ -11,8 +11,10 @@ class MetricsCubit extends Cubit<MetricsState> {
 
   final OrdersRepo _repo;
 
+  /// List of orders fetched from the repository.
   List<OrderModel> orders = [];
 
+  /// Fetches orders from the repository and updates the state.
   Future<void> fetchOrders() async {
     try {
       emit(OrdersLoading());
@@ -23,14 +25,15 @@ class MetricsCubit extends Cubit<MetricsState> {
     }
   }
 
+  /// Returns the total count of orders.
   int get totalCount => orders.length;
 
+  /// Returns the average price of all orders.
   double get averagePrice =>
       orders.map((order) => order.price).reduce((a, b) => a + b) /
-          orders.length;
+      orders.length;
 
+  /// Returns the count of orders that have been returned.
   int get returnsCount =>
-      orders
-          .where((order) => order.status == OrderStatus.returned)
-          .length;
+      orders.where((order) => order.status == OrderStatus.returned).length;
 }

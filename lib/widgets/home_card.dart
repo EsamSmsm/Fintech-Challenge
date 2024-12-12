@@ -18,21 +18,47 @@ class HomeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: ListTile(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(12),
+      child: Container(
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          color: ColorManager.itemBG,
+          borderRadius: BorderRadius.circular(12),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.2),
+              spreadRadius: 2,
+              blurRadius: 5,
+              offset: const Offset(0, 2),
+            ),
+          ],
         ),
-        tileColor: ColorManager.itemBG,
-        onTap: onTap,
-        leading: Icon(icon, size: 40, color: ColorManager.secondary),
-        title: Text(
-          title,
-          style: const TextStyle(color: ColorManager.primary),
-        ),
-        subtitle: Text(
-          subtitle,
-          style: TextStyle(color: ColorManager.primary.withAlpha(200)),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(icon, size: 50, color: ColorManager.secondary),
+            const SizedBox(height: 12),
+            Text(
+              title,
+              style: const TextStyle(
+                color: ColorManager.primary,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 8),
+            Text(
+              subtitle,
+              style: TextStyle(
+                color: ColorManager.primary.withAlpha(200),
+                fontSize: 14,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ],
         ),
       ),
     );
