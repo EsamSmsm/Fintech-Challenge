@@ -4,9 +4,6 @@
 
 A Flutter app showcasing a FinTech dashboard with metrics and graph visualizations. Runs on iOS,
 Android, and Web with a responsive UI.
-![Simulator Screenshot - iPhone 16 Pro - 2024-12-12 at 18 29 20](https://github.com/user-attachments/assets/d78bad30-8082-4fe7-a0ad-638696e92455)
-![Simulator Screenshot - iPhone 16 Pro - 2024-12-12 at 18 29 28](https://github.com/user-attachments/assets/8817c189-33d5-4b00-a57c-1296a0b29a77)
-![Simulator Screenshot - iPhone 16 Pro - 2024-12-12 at 18 29 15](https://github.com/user-attachments/assets/236269f6-045d-4e15-a2da-2fea28abfb86)
 
 ### Features
 
@@ -30,7 +27,7 @@ Android, and Web with a responsive UI.
     git clone https://github.com/EsamSmsm/Fintech-Challenge.git
     cd fintech_challenge
     ```
-
+    
 2. Install dependencies:
     ```sh
     flutter pub get
@@ -76,4 +73,17 @@ To run tests, use the following command:
 
 ```sh
 flutter test
+```
 
+### iOS Screenshots
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d78bad30-8082-4fe7-a0ad-638696e92455" alt="Simulator Screenshot - iPhone 16 Pro - 2024-12-12 at 18 29 20" width="200"/>
+  <img src="https://github.com/user-attachments/assets/8817c189-33d5-4b00-a57c-1296a0b29a77" alt="Simulator Screenshot - iPhone 16 Pro - 2024-12-12 at 18 29 28" width="200"/>
+  <img src="https://github.com/user-attachments/assets/236269f6-045d-4e15-a2da-2fea28abfb86" alt="Simulator Screenshot - iPhone 16 Pro - 2024-12-12 at 18 29 15" width="200"/>
+</p>
+
+
+### Web Screenshots
+![Screenshot 2024-12-12 at 6 45 41 PM](https://github.com/user-attachments/assets/13b8498a-cdff-4a6e-9c5f-6df8206ae9eb)
+![Screenshot 2024-12-12 at 6 44 58 PM](https://github.com/user-attachments/assets/00e674da-4b27-40e5-9b09-c4b1ab78188c)
+![Screenshot 2024-12-12 at 6 44 41 PM](https://github.com/user-attachments/assets/b6bff4ee-7517-4b45-9a52-959403fcef73)
