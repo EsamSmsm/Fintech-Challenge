@@ -84,6 +84,7 @@ flutter test
 
 
 ### Web Screenshots
-![Screenshot 2024-12-12 at 6 45 41 PM](https://github.com/user-attachments/assets/13b8498a-cdff-4a6e-9c5f-6df8206ae9eb)
-![Screenshot 2024-12-12 at 6 44 58 PM](https://github.com/user-attachments/assets/00e674da-4b27-40e5-9b09-c4b1ab78188c)
 ![Screenshot 2024-12-12 at 6 44 41 PM](https://github.com/user-attachments/assets/b6bff4ee-7517-4b45-9a52-959403fcef73)
+![Screenshot 2024-12-12 at 6 44 58 PM](https://github.com/user-attachments/assets/00e674da-4b27-40e5-9b09-c4b1ab78188c)
+![Screenshot 2024-12-12 at 6 45 41 PM](https://github.com/user-attachments/assets/13b8498a-cdff-4a6e-9c5f-6df8206ae9eb)
+
