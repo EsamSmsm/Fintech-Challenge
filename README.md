@@ -4,6 +4,9 @@
 
 A Flutter app showcasing a FinTech dashboard with metrics and graph visualizations. Runs on iOS,
 Android, and Web with a responsive UI.
+![Simulator Screenshot - iPhone 16 Pro - 2024-12-12 at 18 29 20](https://github.com/user-attachments/assets/d78bad30-8082-4fe7-a0ad-638696e92455)
+![Simulator Screenshot - iPhone 16 Pro - 2024-12-12 at 18 29 28](https://github.com/user-attachments/assets/8817c189-33d5-4b00-a57c-1296a0b29a77)
+![Simulator Screenshot - iPhone 16 Pro - 2024-12-12 at 18 29 15](https://github.com/user-attachments/assets/236269f6-045d-4e15-a2da-2fea28abfb86)
 
 ### Features
 
@@ -55,6 +58,7 @@ Android, and Web with a responsive UI.
 - **flutter_svg**: Renders SVG images in Flutter.
 - **syncfusion_flutter_charts**: Provides a wide range of chart widgets.
 
+
 ### Dev Dependencies
 
 - **flutter_test**: Provides testing utilities for Flutter apps.
@@ -72,3 +76,4 @@ To run tests, use the following command:
 
 ```sh
 flutter test
+
