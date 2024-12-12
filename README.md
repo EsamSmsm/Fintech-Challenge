@@ -75,11 +75,22 @@ To run tests, use the following command:
 flutter test
 ```
 
-### iOS Screenshots
+
+
+### IOS Screenshots
 <p align="center">
   <img src="https://github.com/user-attachments/assets/d78bad30-8082-4fe7-a0ad-638696e92455" alt="Simulator Screenshot - iPhone 16 Pro - 2024-12-12 at 18 29 20" width="200"/>
   <img src="https://github.com/user-attachments/assets/8817c189-33d5-4b00-a57c-1296a0b29a77" alt="Simulator Screenshot - iPhone 16 Pro - 2024-12-12 at 18 29 28" width="200"/>
   <img src="https://github.com/user-attachments/assets/236269f6-045d-4e15-a2da-2fea28abfb86" alt="Simulator Screenshot - iPhone 16 Pro - 2024-12-12 at 18 29 15" width="200"/>
+</p>
+
+
+### Android Screenshots 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8d288c41-ce2a-44ad-81a5-f8bf0a27fd7b" alt="Screenshot_3" width="200">
+  <img src="https://github.com/user-attachments/assets/2fb2beed-4043-4ebc-8fac-1c824415beee" alt="Screenshot_1" width="200">
+  <img src="https://github.com/user-attachments/assets/30671291-0903-4f87-8dfd-84c5cb3cba31" alt="Screenshot_2" width="200">
+ 
 </p>
 
 
