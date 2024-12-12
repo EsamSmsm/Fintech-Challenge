@@ -7,16 +7,16 @@ import '../../../data/repo/orders_repo.dart';
 part 'metrics_state.dart';
 
 class MetricsCubit extends Cubit<MetricsState> {
-  MetricsCubit(this.repo) : super(MetricsInitial());
+  MetricsCubit(this._repo) : super(MetricsInitial());
 
-  final OrdersRepo repo;
+  final OrdersRepo _repo;
 
   List<OrderModel> orders = [];
 
   Future<void> fetchOrders() async {
     try {
       emit(OrdersLoading());
-      orders = await repo.fetchOrders();
+      orders = await _repo.fetchOrders();
       emit(OrdersLoaded());
     } catch (e) {
       emit(OrdersError(e.toString()));
@@ -27,8 +27,10 @@ class MetricsCubit extends Cubit<MetricsState> {
 
   double get averagePrice =>
       orders.map((order) => order.price).reduce((a, b) => a + b) /
-      orders.length;
+          orders.length;
 
   int get returnsCount =>
-      orders.where((order) => order.status == OrderStatus.returned).length;
+      orders
+          .where((order) => order.status == OrderStatus.returned)
+          .length;
 }

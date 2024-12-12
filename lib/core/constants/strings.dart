@@ -12,4 +12,8 @@ class StringsManager {
   static const String totalOrders = 'Total Orders';
   static const String averagePrice = 'Average Price';
   static const String returnedOrders = 'Returned Orders';
+  static const String ordersOverTime = 'Orders Over Time';
+  static const String time = 'Time';
+  static const String orders = 'Orders';
+  static const String ordersCount = 'Number Of Orders';
 }

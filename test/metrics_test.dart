@@ -9,6 +9,7 @@ import 'test.mocks.dart';
 
 @GenerateMocks([OrdersRepo])
 void main() {
+  //metrics cubit test
   group('MetricsCubit', () {
     late MetricsCubit metricsCubit;
     late OrdersRepo mockOrdersRepo;
