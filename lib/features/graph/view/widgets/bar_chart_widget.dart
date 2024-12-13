@@ -33,6 +33,8 @@ class BarChartWidget extends StatelessWidget {
       zoomPanBehavior: ZoomPanBehavior(
           enableDoubleTapZooming: true,
           enableMouseWheelZooming: true,
+          enableSelectionZooming: true,
+          enablePinching: true,
           enablePanning: true,
           zoomMode: ZoomMode.x),
       isTransposed: true,
